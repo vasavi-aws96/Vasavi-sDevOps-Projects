@@ -71,11 +71,11 @@ resource "aws_security_group" "webSg" {
 }
 
 resource "aws_s3_bucket" "s3bucket" {
-  bucket = "Vasaviterrafoem2024"
+  bucket = "vasaviterrafoem2024"
 }
 
 resource "aws_instance" "webserver1" {
-  ami = "ami-04b70fa74e45c3917"
+  ami = "ami-04b4f1a9cf54c11d0"
   instance_type = "t2.micro"
   vpc_security_group_ids = [aws_security_group.webSg.id]
   subnet_id = aws_subnet.sub1.id
@@ -84,7 +84,7 @@ resource "aws_instance" "webserver1" {
 }
 
 resource "aws_instance" "webserver2" {
-  ami = "ami-04b70fa74e45c3917"
+  ami = "ami-04b4f1a9cf54c11d0"
   instance_type = "t2.micro"
   vpc_security_group_ids = [aws_security_group.webSg.id]
   subnet_id = aws_subnet.sub2.id
